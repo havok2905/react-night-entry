@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from './map-component';
 
 class Place extends React.Component {
 
@@ -15,6 +16,7 @@ class Place extends React.Component {
         <p>{ this.props.place.city }</p>
         <p>{ this.props.place.state }</p>
         <p>{ this.props.place.zip }</p>
+        <Map lat={ this.props.place.lat } lon={ this.props.place.lon }/>
       </div>
     );
   }
