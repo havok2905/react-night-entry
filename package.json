@@ -20,7 +20,10 @@
   "homepage": "https://github.com/OrlandoDevs/react-starter#readme",
   "dependencies": {
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "events": "^1.1.0",
+    "flux": "^2.1.1",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.4",
