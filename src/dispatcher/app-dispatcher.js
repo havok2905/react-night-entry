@@ -2,6 +2,7 @@ import Flux from 'flux';
 
 import PlaceStore from '../stores/place-store';
 import TagStore from '../stores/tag-store';
+import SpinnyStore from '../stores/spinny-store';
 
 let AppDispatcher = new Flux.Dispatcher();
 
@@ -15,6 +16,12 @@ AppDispatcher.register((action)=> {
       break;
     case 'SET_TAGS':
       TagStore.setTags();
+      break;
+    case 'SPINNING_OFF':
+      SpinnyStore.toggleSpinningOff();
+      break;
+    case 'SPINNING_ON':
+      SpinnyStore.toggleSpinningOn();
       break;
   }
 });

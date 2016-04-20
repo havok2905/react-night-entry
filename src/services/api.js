@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+import SpinnyStore from '../stores/spinny-store';
 
 const API_BASE = 'http://quiet-thicket-99975.herokuapp.com';
 
@@ -6,6 +7,7 @@ export default (()=> {
 
   let places = (tags) => {
     const url = `${API_BASE}/places/by_tag_names/${tags}`;
+    SpinnyStore.toggleSpinningOn();
     return handleRequest(url);
   }
 

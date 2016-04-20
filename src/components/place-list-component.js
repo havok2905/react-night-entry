@@ -1,6 +1,8 @@
 import React from 'react';
 import PlaceStore from '../stores/place-store';
+import SpinnyStore from '../stores/spinny-store';
 import Place from '../components/place-component';
+import Spinny from './spinny-component';
 
 class PlaceList extends React.Component {
 
@@ -34,9 +36,12 @@ class PlaceList extends React.Component {
 
   render() {
     return (
-      <ul className='place-list'>
-        { this.places() }
-      </ul>
+      <div>
+        <Spinny />
+        <ul className='place-list'>
+          { this.places() }
+        </ul>
+      </div>
     );
   }
 }

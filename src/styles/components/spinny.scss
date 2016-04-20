@@ -1,0 +1,14 @@
+.spinny {
+  background-color: $color-white;
+  display: block;
+  height: 100px;
+  width: 100px;
+  -webkit-animation: infinite 3s spinny;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes spinny{
+  to {
+    -webkit-transform : rotate(360deg);
+  }
+}

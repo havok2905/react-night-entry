@@ -35,9 +35,11 @@ class TagList extends React.Component {
 
   render() {
     return (
-      <ul className='tag-list'>
-        { this.tags() }
-      </ul>
+      <div>
+        <ul className='tag-list'>
+          { this.tags() }
+        </ul>
+      </div>
     );
   }
 }
