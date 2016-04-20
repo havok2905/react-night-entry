@@ -12,10 +12,8 @@ class Place extends React.Component {
       <div>
         <p><strong>{ this.props.place.name }</strong></p>
         <p>{ this.props.place.description }</p>
-        <p>{ this.props.place.street }</p>
-        <p>{ this.props.place.city }</p>
-        <p>{ this.props.place.state }</p>
-        <p>{ this.props.place.zip }</p>
+        <p>{ this.props.place.street }, { this.props.place.city }</p>
+        <p>{ this.props.place.state }, { this.props.place.zip }</p>
         <Map lat={ this.props.place.lat } lon={ this.props.place.lon }/>
       </div>
     );

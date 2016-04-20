@@ -1,9 +1,12 @@
-*, *:before, *:after {
-  position: relative;
-  box-sizing: border-box;
-}
+@import "utils/colors";
 
-body, html {
-  display: block;
-  margin: 0;
-}
+@import "base/base";
+@import "base/typography";
+
+@import "components/tag-list";
+@import "components/tags";
+@import "components/places";
+@import "components/button";
+@import "components/place-list";
+@import "components/place-form";
+@import "components/header";

@@ -1,0 +1,15 @@
+.place-form {
+  input, label {
+    display: block;
+  }
+
+  [type='text'] {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+}

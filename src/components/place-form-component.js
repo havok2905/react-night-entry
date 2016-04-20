@@ -20,14 +20,14 @@ class PlaceForm extends React.Component {
 
   render() {
     return (
-      <form>
+      <form className='place-form'>
         <fieldset>
           <label for='tags'>Search for Places</label>
           <input name='tags' ref='tags' type='text' placeholder='Tags' />
         </fieldset>
         <fieldset>
           <button type='button' onClick={this.setPlaces.bind(this)} className='button button--save'>Search</button>
-          <button type='button' onClick={this.clearPlaces.bind(this)} className='button button--save'>Clear</button>
+          <button type='button' onClick={this.clearPlaces.bind(this)} className='button button--destroy'>Clear</button>
         </fieldset>
       </form>
     );
