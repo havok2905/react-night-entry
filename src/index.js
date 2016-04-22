@@ -14,18 +14,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header className='header'>
-          <h1>Hidden Gems</h1>
-          <h2>Central Florida's Database of Local Eats</h2>
-        </header>
         <section className='places'>
-          <h3>Places</h3>
-          <PlaceForm />
-          <PlaceList />
+          <div className='container'>
+            <h1>Hidden Gems</h1>
+            <h2>Central Florida's Database of Local Eats</h2>
+            <PlaceForm />
+            <PlaceList />
+          </div>
         </section>
         <section className='tags'>
-          <h3>Tags</h3>
-          <TagList/>
+          <div className='container'>
+            <h3>Tags</h3>
+            <TagList/>
+          </div>
         </section>
       </div>
     );

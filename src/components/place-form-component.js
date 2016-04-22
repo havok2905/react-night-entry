@@ -23,7 +23,7 @@ class PlaceForm extends React.Component {
       <form className='place-form'>
         <fieldset>
           <label for='tags'>Search for Places</label>
-          <input name='tags' ref='tags' type='text' placeholder='Tags' />
+          <input name='tags' ref='tags' type='text' placeholder='pizza,beer,bar' />
         </fieldset>
         <fieldset>
           <button type='button' onClick={this.setPlaces.bind(this)} className='button button--save'>Search</button>
