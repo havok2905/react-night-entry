@@ -13,7 +13,7 @@
     background-color: transparent;
     border: solid 2px $color-white;
 
-    &:hover {
+    &:hover, &active, &:focus {
       color: $color-white;
       background-color: $color-error;
       border: solid 2px $color-error;
@@ -25,7 +25,7 @@
     background-color: transparent;
     border: solid 2px $color-white;
 
-    &:hover {
+    &:hover, &active, &:focus {
       color: $color-primary;
       background-color: $color-white;
       border: solid 2px $color-primary;
