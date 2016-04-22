@@ -5,15 +5,24 @@ class TagStore extends EventEmitter {
   constructor() {
     super();
     this._tags = [];
+    this._loading = false;
   }
 
   tags() {
     return this._tags;
   }
 
+  loading() {
+    return this._loading;
+  }
+
   setTags(tags) {
+    this._loading = true;
+    this.emitChange();
+
     Api.tags().then((result)=> {
       this._tags = result.tags;
+      this._loading = false;
       this.emitChange();
     });
   }

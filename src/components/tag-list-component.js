@@ -1,6 +1,7 @@
 import React from 'react';
 import TagActions from '../actions/tag-actions';
 import TagStore from '../stores/tag-store';
+import Spinny from '../components/spinny-component';
 
 class TagList extends React.Component {
 
@@ -16,7 +17,7 @@ class TagList extends React.Component {
   }
 
   getStateFromStore() {
-    return { tags: TagStore.tags() };
+    return { loading: TagStore.loading(), tags: TagStore.tags() };
   }
 
   onChange() {
@@ -36,6 +37,7 @@ class TagList extends React.Component {
   render() {
     return (
       <div>
+        <Spinny spinning={ this.state.loading }/>
         <ul className='tag-list'>
           { this.tags() }
         </ul>
