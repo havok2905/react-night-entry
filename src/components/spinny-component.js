@@ -1,28 +1,13 @@
 import React from 'react';
-import SpinnyStore from '../stores/spinny-store';
 
 class Spinny extends React.Component {
 
   constructor(props) {
-    super();
-    this.state = this.getStateFromStore();
-    SpinnyStore.addChangeListener(this.onChange.bind(this));
-  }
-
-  componentWillUnmount() {
-    SpinnyStore.removeChangeListener(this.onChange);
-  }
-
-  getStateFromStore() {
-    return { spinning: SpinnyStore.spinning() };
-  }
-
-  onChange() {
-    this.setState( this.getStateFromStore() );
+    super(props);
   }
 
   render() {
-    if(this.state.spinning) {
+    if(this.props.spinning) {
       return (
         <div className='spinny'>
         </div>

@@ -1,21 +1,28 @@
 import EventEmitter from 'events';
 import Api from '../services/api';
-import SpinnyStore from './spinny-store';
 
 class PlaceStore extends EventEmitter {
   constructor() {
     super();
     this._places = [];
+    this._loading = false
   }
 
   places() {
     return this._places;
   }
 
+  loading() {
+    return this._loading;
+  }
+
   setPlaces(tags) {
+    this._loading = true;
+    this.emitChange();
+
     Api.places(tags).then((result)=> {
-      SpinnyStore.toggleSpinningOff();
       this._places = result.places;
+      this._loading = false;
       this.emitChange();
     });
   }
