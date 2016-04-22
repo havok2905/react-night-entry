@@ -1,7 +1,7 @@
 .places {
   @include diagonal-gradient($color-primary, $color-secondary);
 
-  position: relative;
-  z-index: 100;
+  position:   relative;
+  z-index:    100;
   box-shadow: 0px 0px 20px 0px $color-black-true;
 }

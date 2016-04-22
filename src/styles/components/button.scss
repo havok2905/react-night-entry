@@ -1,34 +1,39 @@
 .button {
-  outline: none;
-  border: none;
-  padding: 20px 60px;
-  border-radius: 5px;
-  margin: 5px;
+  outline:        none;
+  border:         none;
+  padding:        20px 60px;
+  border-radius:  5px;
+  margin:         5px;
   text-transform: uppercase;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight:    bold;
+  transition:     0.3s;
+  cursor:         pointer;
 
   &--destroy {
-    color: $color-white;
+    color:            $color-white;
     background-color: transparent;
-    border: solid 2px $color-white;
+    border:           solid 2px $color-white;
 
-    &:hover, &active, &:focus {
-      color: $color-white;
+    &:hover,
+    &:active,
+    &:focus {
+      color:            $color-white;
       background-color: $color-error;
-      border: solid 2px $color-error;
+      border:           solid 2px $color-error;
     }
   }
 
   &--save {
-    color: $color-white;
+    color:            $color-white;
     background-color: transparent;
-    border: solid 2px $color-white;
+    border:           solid 2px $color-white;
 
-    &:hover, &active, &:focus {
-      color: $color-primary;
+    &:hover,
+    &:active,
+    &:focus {
+      color:            $color-primary;
       background-color: $color-white;
-      border: solid 2px $color-primary;
+      border:           solid 2px $color-primary;
     }
   }
 }

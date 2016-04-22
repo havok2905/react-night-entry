@@ -1,12 +1,14 @@
 *, *:before, *:after {
-  position: relative;
+  position:   relative;
   box-sizing: border-box;
 }
 
 body, html {
-  display: block;
-  margin: 0;
+  display:          block;
+  margin:           0;
   background-color: $color-black;
+
+  ::selection { background: $color-error; }
 }
 
 section {
