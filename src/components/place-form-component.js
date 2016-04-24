@@ -21,6 +21,7 @@ class PlaceForm extends React.Component {
   setPlaces() {
     let node = this.input();
     let tags = node.value;
+    PlaceActions.clearPlaces();
     PlaceActions.setPlaces(tags);
   }
 
