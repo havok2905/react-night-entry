@@ -19,7 +19,7 @@ class Place extends React.Component {
           <p><strong>{ this.props.place.name }</strong></p>
           <p>{ this.props.place.description }</p>
           <p><strong>{ this.props.place.street }, { this.props.place.city } { this.props.place.state }, { this.props.place.zip }</strong></p>
-          <p><a href={ this.props.place.website }>Website</a></p>
+          <p><a href={ this.props.place.website } target='_blank'>Website</a></p>
         </div>
       </div>
     );
