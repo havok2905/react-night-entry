@@ -2,8 +2,7 @@
   list-style-type: none;
 
   li {
-    padding:          50px;
-    width:            30%;
+    width:            350px;
     margin:           1%;
     display:          inline-block;
     box-sizing:       border-box;
@@ -20,6 +19,15 @@
     p {
       font-size: 0.667em;
       &:first-child { font-size: 1em; }
+    }
+
+    img {
+      border-top-right-radius: 5px;
+      border-top-left-radius:  5px;
+    }
+
+    .place-list__content {
+      padding: 50px;
     }
   }
 }

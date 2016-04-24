@@ -10,9 +10,13 @@ class Place extends React.Component {
   render() {
     return (
       <div>
-        <p><strong>{ this.props.place.name }</strong></p>
-        <p>{ this.props.place.description }</p>
-        <p>{ this.props.place.street }, { this.props.place.city } { this.props.place.state }, { this.props.place.zip }</p>
+        <img src='http://www.fillmurray.com/350/275'/>
+        <div class='place-list__content'>
+          <p><strong>{ this.props.place.name }</strong></p>
+          <p>{ this.props.place.description }</p>
+          <p><strong>{ this.props.place.street }, { this.props.place.city } { this.props.place.state }, { this.props.place.zip }</strong></p>
+          <p><a href=''>Website</a></p>
+        </div>
       </div>
     );
   }
