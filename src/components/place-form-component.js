@@ -10,10 +10,16 @@ class PlaceForm extends React.Component {
 
   clearPlaces() {
     PlaceActions.clearPlaces();
+    let node = this.input();
+    node.value = '';
+  }
+
+  input() {
+    return ReactDOM.findDOMNode(this.refs.tags);
   }
 
   setPlaces() {
-    let node = ReactDOM.findDOMNode(this.refs.tags);
+    let node = this.input();
     let tags = node.value;
     PlaceActions.setPlaces(tags);
   }
