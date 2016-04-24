@@ -10,6 +10,9 @@ AppDispatcher.register((action)=> {
     case 'SET_PLACES':
       PlaceStore.setPlaces(action.tags);
       break;
+    case 'SET_ALL_PLACES':
+      PlaceStore.setAllPlaces();
+      break;
     case 'CLEAR_PLACES':
       PlaceStore.clearPlaces();
       break;

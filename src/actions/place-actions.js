@@ -7,6 +7,9 @@ let PlaceActions = {
       tags:    tags
     });
   },
+  setAllPlaces: (tags)=> {
+    AppDispatcher.dispatch({ actionType: 'SET_ALL_PLACES' });
+  },
   clearPlaces: ()=> {
     AppDispatcher.dispatch({ actionType: 'CLEAR_PLACES' });
   }

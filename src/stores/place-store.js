@@ -27,6 +27,17 @@ class PlaceStore extends EventEmitter {
     });
   }
 
+  setAllPlaces() {
+    this._loading = true;
+    this.emitChange();
+
+    Api.allPlaces().then((result)=> {
+      this._places = result.places;
+      this._loading = false;
+      this.emitChange();
+    });
+  }
+
   clearPlaces() {
     this._places = [];
     this.emitChange();

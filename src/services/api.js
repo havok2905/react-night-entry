@@ -9,6 +9,11 @@ export default (()=> {
     return handleRequest(url);
   }
 
+  let allPlaces = () => {
+    const url = `${API_BASE}/places`;
+    return handleRequest(url);
+  }
+
   let tags = ()=> {
     const url = `${API_BASE}/tags`;
     return handleRequest(url);
@@ -24,6 +29,6 @@ export default (()=> {
       });
   }
 
-  return { tags, places }
+  return { tags, places, allPlaces }
 
 })();

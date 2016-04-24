@@ -10,6 +10,10 @@ class PlaceForm extends React.Component {
 
   clearPlaces() {
     PlaceActions.clearPlaces();
+    this.clearInput();
+  }
+
+  clearInput() {
     let node = this.input();
     node.value = '';
   }
@@ -19,10 +23,15 @@ class PlaceForm extends React.Component {
   }
 
   setPlaces() {
-    let node = this.input();
-    let tags = node.value;
+    this.input().value;
     PlaceActions.clearPlaces();
     PlaceActions.setPlaces(tags);
+  }
+
+  setAllPlaces() {
+    PlaceActions.clearPlaces();
+    PlaceActions.setAllPlaces();
+    this.clearInput();
   }
 
   render() {
@@ -34,6 +43,7 @@ class PlaceForm extends React.Component {
         </fieldset>
         <fieldset>
           <button type='button' onClick={this.setPlaces.bind(this)} className='button button--save'>Search</button>
+          <button type='button' onClick={this.setAllPlaces.bind(this)} className='button button--save'>All</button>
           <button type='button' onClick={this.clearPlaces.bind(this)} className='button button--destroy'>Clear</button>
         </fieldset>
       </form>
